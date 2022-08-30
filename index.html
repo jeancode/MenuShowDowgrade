@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Desplegable</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        #contenido{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgb(36, 36, 36);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #Menu{
+            width: 500px;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            transition: all .5s ease;;
+            border:1px solid rgb(67, 64, 64);
+            box-shadow: 0px 0px 30px rgba(2, 2, 2, 0.618);
+            border-radius: 10px;
+  
+        }
+        .itemMenu{
+            flex:1;
+            width: 100px;
+            height: 60px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid var(--b);
+            
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all .2s ease;;
+        }
+        .itemMenu:hover{
+            background: linear-gradient(0deg,rgb(232, 85, 255),rgb(255, 118, 118));
+            height: var(--i);
+            transition: all .5s ease;;
+            transform: translateY(var(--h)) scale(1.1);
+            box-shadow: 0px 0px 30px black;;
+            z-index: 3;
+
+        }
+        .itemListCompl{
+            width: 100%;
+            min-height: 60px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease;;
+            border-left: 1px solid rgb(52, 52, 52);
+        }
+        .itemListCompl:hover{
+            background: rgba(0, 0, 0, 0.241);
+            transition: all .5s ease;;
+            -webkit-user-select: none;
+        }
+
+        .title{
+            background: rgb(23, 23, 23);
+            cursor: default;
+        }
+        .title:hover{
+            background: rgba(255, 0, 0, 0);;
+            cursor: default;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contenido">
+
+        <div id="Menu">
+
+            <div class="itemMenu" style="--h:0px">
+                <div class="itemListCompl title">
+                    Home
+                </div>
+            </div>
+            <div class="itemMenu" style="--h:-60px;--i:240px;">
+                <div class="itemListCompl title ">
+                    About
+                </div>
+                <div class="itemListCompl">
+                    Phones
+                </div>
+                <div class="itemListCompl">
+                    Offices
+                </div>
+                <div class="itemListCompl">
+                    Special queries
+                </div>
+            </div>
+            <div class="itemMenu" style="--h:-60px;--i:180px">
+
+                <div class="itemListCompl title">
+                   Big Widgets
+                </div>
+                <div class="itemListCompl">
+                    Bigger Widgets
+                </div>
+                <div class="itemListCompl">
+                    Huge Widgets
+                </div>
+
+            </div>
+            <div class="itemMenu" style="--h:-60px;--i:180px">
+                <div class="itemListCompl title">
+                    Contact 
+                </div>
+                <div class="itemListCompl">
+                    Direct contact
+                </div>
+                <div class="itemListCompl">
+                    General contact 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
